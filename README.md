@@ -2,14 +2,18 @@
 # AIM:
 To implement the Diffee Hellman Algoirthm using C or Python.
 # DESIGN STEPS:
-Step 1: Design the Diffie-Hellman key exchange algorithm.
-Step 2: Implement the algorithm using C.
-Step 3: The Diffie-Hellman algorithm uses a large prime number p and a
-primitive root g. Both Eve and David select private keys and exchange public
-keys computed using the formula:
-Public Key = (g^Private Key) % p
-After exchanging public keys, both compute a shared secret key using:
-Shared Secret = (Other's Public Key^Private Key) % p
+Step 1: Both Alice and Bob shares the same public keys g and p.
+
+Step 2: Alice selects a random public key a.
+
+Step 3: Alice computes his secret key A as g a mod p.
+
+Step 4: Then Alice sends A to Bob.
+
+Step 5: Similarly Bob also selects a public key b and computes his secret key as B and sends the same back to Alice.
+
+Step 6: Now both of them compute their common secret key as the other one’s secret key power of a mod p.
+
 # PROGRAM:
 ```
   #include <stdio.h>
