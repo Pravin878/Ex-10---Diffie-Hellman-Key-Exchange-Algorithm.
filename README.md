@@ -1,7 +1,7 @@
 # Ex-10---Diffie-Hellman-Key-Exchange-Algorithm.
 # AIM:
 To implement the Diffee Hellman Algoirthm using C or Python.
-DESIGN STEPS:
+# DESIGN STEPS:
 Step 1: Design the Diffie-Hellman key exchange algorithm.
 Step 2: Implement the algorithm using C.
 Step 3: The Diffie-Hellman algorithm uses a large prime number p and a
@@ -11,7 +11,8 @@ Public Key = (g^Private Key) % p
 After exchanging public keys, both compute a shared secret key using:
 Shared Secret = (Other's Public Key^Private Key) % p
 # PROGRAM:
-#include <stdio.h>
+```
+  #include <stdio.h>
 long long int mod_exp(long long int base, long long int exp, long long int mod) {
     long long int result = 1;
     while (exp > 0) {
@@ -68,6 +69,7 @@ int main() {
 
     return 0;
 }
+```
 # OUTPUT:
 ![Screenshot 2024-10-16 224516](https://github.com/user-attachments/assets/70f5bba3-3c1c-4129-8546-83fba03b57d5)
 # RESULT:
